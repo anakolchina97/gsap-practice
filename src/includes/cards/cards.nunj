@@ -5,7 +5,8 @@
 		{{card({
 			title: 'Parallax',
 			img: 'cards/parallax',
-			description: 'Parallax эффект, реализованный с&nbsp;использованием анимации GSAP, погружает зрителя в&nbsp;впечатляющее космическое путешествие, создавая иллюзию парящего космонавта в&nbsp;бескрайнем пространстве.'
+			description: 'The parallax effect, implemented using GSAP animation, immerses the viewer in&nbsp;an&nbsp;impressive cosmic journey, creating the illusion of&nbsp;a&nbsp;floating astronaut in&nbsp;the endless space.',
+			href: 'parallax.html'
 		})}}
 	</div>
 </section>

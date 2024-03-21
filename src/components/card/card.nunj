@@ -11,5 +11,6 @@
 			mobile: false
 		})}}
 		<p class="card__description">{{ props.description }}</p>
+		<a class="card__link" href="{{ props.href }}" target="_blank" aria-label="Смотреть проект"></a>
 	</article>
 {% endmacro %}
