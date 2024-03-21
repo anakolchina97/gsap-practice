@@ -11,13 +11,23 @@ class Parallax {
 		this.planets.forEach(planet => {
 			const depth = parseFloat(planet.getAttribute('data-depth'));
 
+			function rotateForever() {
+				gsap.to(planet, {
+					rotation: '+=360',
+					duration: 40,
+					ease: 'none',
+					onComplete: rotateForever,
+				});
+			}
+			rotateForever();
+
 			gsap.to(planet, {
 				ease: 'none',
-				scale: 2,
+				scale: 1.2,
 				y: 10 * depth,
 				scrollTrigger: {
 					markers: true,
-					scrub: true,
+					scrub: 5,
 				},
 			});
 		});

@@ -14,7 +14,7 @@
 		format: 'png',
 		className: 'parallax__planet-img',
 		classNameWrapper: 'parallax__planet _earth',
-		attr: 'data-depth="-50"',
+		attr: 'data-depth="-30"',
 		mobile: false
 	})}}
 </section>
