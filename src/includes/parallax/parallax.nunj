@@ -1,0 +1,20 @@
+{% from "../../components/picture/picture.nunj" import picture %}
+
+<section class="parallax">
+	{{picture({
+		name: 'parallax/mars',
+		format: 'png',
+		className: 'parallax__planet-img',
+		classNameWrapper: 'parallax__planet _mars',
+		attr: 'data-depth="10"',
+		mobile: false
+	})}}
+	{{picture({
+		name: 'parallax/earth',
+		format: 'png',
+		className: 'parallax__planet-img',
+		classNameWrapper: 'parallax__planet _earth',
+		attr: 'data-depth="-50"',
+		mobile: false
+	})}}
+</section>

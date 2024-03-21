@@ -1,7 +1,5 @@
 {% extends "../templates/base.nunj" %}
 
-{% set header = true %}
-
 {% block content %}
-	{% include "../includes/cards/cards.nunj" %}
+	{% include "../includes/parallax/parallax.nunj" %}
 {% endblock %}

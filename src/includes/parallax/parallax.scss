@@ -1,0 +1,44 @@
+.parallax {
+	width: 100%;
+	height: rem(1200);
+	background: url('../images/parallax/sky.jpg') no-repeat 0 0;
+	background-size: cover;
+	background-attachment: fixed;
+	&__planet {
+		position: absolute;
+		will-change: transform;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		&._mars {
+			--size: #{rem(150)};
+			width: var(--size);
+			height: var(--size);
+			top: rem(219);
+			left: rem(211);
+		}
+		&._earth {
+			--size: #{rem(100)};
+			width: var(--size);
+			height: var(--size);
+			top: rem(703);
+			right: rem(247);
+		}
+		&._mars2 {
+			--size: #{rem(150)};
+			width: var(--size);
+			height: var(--size);
+			top: rem(719);
+			left: rem(211);
+		}
+		&._earth2 {
+			--size: #{rem(100)};
+			width: var(--size);
+			height: var(--size);
+			top: rem(1203);
+			right: rem(247);
+		}
+	}
+}

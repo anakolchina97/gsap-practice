@@ -16,7 +16,9 @@ class ProjectApp {
 		this.classes = {
 			// Signal: require('./classes/Signal').default,
 		};
-		this.components = {};
+		this.components = {
+			Parallax: require('../../includes/parallax/parallax').default,
+		};
 		this.helpers = {};
 		this.modules = {};
 		document.addEventListener('DOMContentLoaded', () => {
