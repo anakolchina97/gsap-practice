@@ -1,0 +1,10 @@
+{% macro picture(props) %}
+	<picture {% if props.classNameWrapper %} class="{{ props.classNameWrapper }}"{% endif %}{% if props.attr %} {{ props.attr }}{% endif %}>
+		{% if props.mobile !== false %}
+			<source media="(max-width: 767px)" srcset="/assets/images/{{props.name}}-sm.webp, /assets/images/{{props.name}}-sm@2x.webp 2x" type="image/webp">
+			<source media="(max-width: 767px)" srcset="/assets/images/{{props.name}}-sm.{{ props.format }}, /assets/images/{{props.name}}-sm@2x.{{ props.format }} 2x">
+		{% endif %}
+		<source srcset="/assets/images/{{props.name}}.webp, /assets/images/{{props.name}}@2x.webp 2x" type="image/webp">
+		<img class="{{props.className}}" src="/assets/images/{{props.name}}.{{ props.format }}" srcset="/assets/images/{{props.name}}@2x.{{ props.format }} 2x" {% if props.lazy !== 'disabled' %} loading="lazy" {% endif %} alt="" />
+	</picture>
+{% endmacro %}

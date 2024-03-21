@@ -1,0 +1,12 @@
+.card {
+	display: flex;
+	flex-direction: column;
+	gap: rem(12);
+	&__pic {
+		overflow: hidden;
+		border-radius: rem(10);
+	}
+	&__img {
+		width: 100%;
+	}
+}

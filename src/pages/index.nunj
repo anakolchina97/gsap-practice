@@ -1,5 +1,5 @@
 {% extends "../templates/base.nunj" %}
 
 {% block content %}
-
+	{% include "../includes/cards/cards.nunj" %}
 {% endblock %}

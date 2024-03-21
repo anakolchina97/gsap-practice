@@ -1,0 +1,15 @@
+{% from "../../components/picture/picture.nunj" import picture %}
+
+{% macro card(props) %}
+	<article class="card">
+		<p class="card__title">{{ props.title }}</p>
+		{{picture({
+			name: props.img,
+			format: 'jpg',
+			className: 'card__img',
+			classNameWrapper: 'card__pic',
+			mobile: false
+		})}}
+		<p class="card__description">{{ props.description }}</p>
+	</article>
+{% endmacro %}

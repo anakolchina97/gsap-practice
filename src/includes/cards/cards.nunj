@@ -1,1 +1,11 @@
-<section class="cards">cards</section>
+{% from "../../components/card/card.nunj" import card %}
+
+<section class="cards">
+	<div class="cards__container container">
+		{{card({
+			title: 'Parallax',
+			img: 'cards/parallax',
+			description: 'Parallax эффект, реализованный с&nbsp;использованием анимации GSAP, погружает зрителя в&nbsp;впечатляющее космическое путешествие, создавая иллюзию парящего космонавта в&nbsp;бескрайнем пространстве.'
+		})}}
+	</div>
+</section>
