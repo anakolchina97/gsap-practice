@@ -7,6 +7,7 @@
 	&__planet {
 		position: absolute;
 		will-change: transform;
+		transition: all 300ms linear;
 		img {
 			width: 100%;
 			height: 100%;
@@ -24,20 +25,6 @@
 			width: var(--size);
 			height: var(--size);
 			top: rem(703);
-			right: rem(247);
-		}
-		&._mars2 {
-			--size: #{rem(150)};
-			width: var(--size);
-			height: var(--size);
-			top: rem(719);
-			left: rem(211);
-		}
-		&._earth2 {
-			--size: #{rem(100)};
-			width: var(--size);
-			height: var(--size);
-			top: rem(1203);
 			right: rem(247);
 		}
 	}
