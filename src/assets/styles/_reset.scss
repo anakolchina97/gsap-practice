@@ -14,9 +14,13 @@ body {
 }
 
 body {
-	font: normal 14px/1.4 Arial, sans-serif;
-	color: #000;
-	background: #fff;
+	font-family: var(--ff-default);
+	font-style: var(--default-font-style);
+	font-size: var(--default-font-size);
+	line-height: var(--default-line-height);
+	font-weight: var(--default-font-weight);
+	color: var(--black);
+	background: var(--white);
 	@include mobile {
 		-webkit-text-size-adjust: 100%;
 	}

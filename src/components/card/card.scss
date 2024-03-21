@@ -9,4 +9,11 @@
 	&__img {
 		width: 100%;
 	}
+	&__title {
+		font-size: rem(22);
+		font-weight: 900;
+	}
+	&__description {
+		font-size: rem(14);
+	}
 }

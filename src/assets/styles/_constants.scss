@@ -1,2 +1,20 @@
 $default-transition-duration: 0.4s;
 $default-transition-function: ease-out;
+
+// ======= COLORS =======
+$white: #ffffff;
+$black: #000000;
+
+:root {
+	// ======= COLORS =======
+	--white: #{$white};
+	--black: #{$black};
+
+	// ======= FONTS =======
+	--ff-default: 'NunitoSans', Arial, sans-serif;
+
+	--default-font-style: normal;
+	--default-font-size: 1rem;
+	--default-font-weight: 400;
+	--default-line-height: 1.3;
+}
