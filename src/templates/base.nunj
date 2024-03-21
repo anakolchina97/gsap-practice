@@ -13,6 +13,7 @@
 		{% endblock stylesheets %}
 	</head>
 	<body>
+		{% include "../includes/header/header.nunj" %}
 
 		<div class="wrapper">
 			{% block content %}
