@@ -1,8 +1,36 @@
+{% from "../icon/icon.nunj" import icon %}
+
 {% macro button(props) %}
-<button class="button{% if props.className %} {{ props.className }}{% endif %}">
-	{{ props.children }}
-	{% if props.chevronRight %}
-	<span class="button__chevron-right">&gt;</span>
+	{% if props.href %}
+		<a class="button{% if props.className %} {{ props.className }}{% endif %}{% if props.page == props.name %} _active{% endif %}" href="{% if props.href %}{{ props.href }}{% else %}#{% endif %}" {% if props.attr %} {{ props.attr }}{% endif %}>
+			{% if props.icon === 'heart-mobile' %}
+				<svg {{ props.iconAttr }} viewBox="0 0 24 24" fill="none">
+					<path
+						d="M11.7639 7.08625L12.25 7.49994L12.7361 7.08625L13.2222 6.67256C13.2222 6.67256 13.2222 6.67255 13.2222 6.67255C14.2232 5.82065 15.6364 5.56326 16.8592 5.88114C18.3561 6.27754 19.75 7.579 19.75 9.99019C19.75 13.133 17.2963 16.0262 12.2496 18.6886C7.20562 16.0371 4.75 13.134 4.75 9.99019C4.75 7.579 6.14391 6.27754 7.64075 5.88114C8.86361 5.56326 10.2768 5.82066 11.2778 6.67256L11.7639 7.08625Z"
+						fill="transparent" stroke-width="1.5" />
+					<circle cx="18.5" cy="5.5" r="3.5" fill="#FCE127" stroke="transparent" />
+				</svg>
+			{% elif props.icon %}
+				{{ icon({
+					iconName: props.icon,
+					attr: props.iconAttr
+				})}}
+			{% endif %}
+			{% if props.children %}
+				{{ props.children }}
+			{% endif %}
+		</a>
+	{% else  %}
+		<button class="button{% if props.className %} {{ props.className }}{% endif %}" type="{% if props.type %}{{ props.type }}{% else %}button{% endif %}" {% if props.attr %} {{ props.attr }}{% endif %}>
+			{% if props.icon %}
+				{{ icon({
+					iconName: props.icon,
+					attr: props.iconAttr
+				})}}
+			{% endif %}
+			{% if props.children %}
+				{{ props.children }}
+			{% endif %}
+		</button>
 	{% endif %}
-</button>
 {% endmacro %}

@@ -1,4 +1,5 @@
 {% from "./_head-scripts.nunj" import headScripts %}
+{% from "../components/button/button.nunj" import button %}
 <!DOCTYPE html>
 <html>
 	<head>
@@ -24,6 +25,13 @@
 			{% block content %}
 			{% endblock content %}
 		</div>
+
+		{% if not header %}
+			{{button({
+				children: 'Return',
+				href: '/'
+			})}}
+		{% endif %}
 
 		{% block scripts %}
 			<script src="assets/js/bundle.js?hash"></script>
