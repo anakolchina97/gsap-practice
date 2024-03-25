@@ -8,5 +8,11 @@
 			description: 'The parallax effect, implemented using GSAP animation, immerses the viewer in&nbsp;an&nbsp;impressive cosmic journey, creating the illusion of&nbsp;a&nbsp;floating astronaut in&nbsp;the endless space.',
 			href: 'parallax.html'
 		})}}
+		{{card({
+			title: 'Mouse Move',
+			img: 'cards/mousemove',
+			description: 'Web effect that responds to&nbsp;mouse movement, adding depth and interactivity. As&nbsp;the mouse moves, elements smoothly shift and rotate, creating a&nbsp;three-dimensional visual perception of&nbsp;the page.',
+			href: 'mousemove.html'
+		})}}
 	</div>
 </section>

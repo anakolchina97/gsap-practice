@@ -26,7 +26,6 @@ class Parallax {
 				scale: 1.2,
 				y: 10 * depth,
 				scrollTrigger: {
-					markers: true,
 					scrub: 5,
 				},
 			});

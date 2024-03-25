@@ -1,0 +1,14 @@
+.mousemove {
+	height: 100vh;
+	background: #d6336c;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	&__text {
+		position: relative;
+		will-change: transform;
+		color: var(--white);
+		text-transform: uppercase;
+		font-size: clamp(1.5rem, -1.5rem + 8vw, 6rem);
+	}
+}

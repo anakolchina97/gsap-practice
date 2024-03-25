@@ -1,0 +1,5 @@
+{% from "../../components/picture/picture.nunj" import picture %}
+
+<section class="mousemove">
+	<h1 class="mousemove__text">Move your mouse</h1>
+</section>

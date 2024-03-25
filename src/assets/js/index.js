@@ -18,6 +18,7 @@ class ProjectApp {
 		};
 		this.components = {
 			Parallax: require('../../includes/parallax/parallax').default,
+			MouseMove: require('../../includes/mousemove/mousemove').default,
 		};
 		this.helpers = {};
 		this.modules = {};
