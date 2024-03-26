@@ -1,6 +1,6 @@
 .parallax {
 	width: 100%;
-	height: rem(1200);
+	height: rem(5000);
 	background: url('../images/parallax/sky.jpg') no-repeat 0 0;
 	background-size: cover;
 	background-attachment: fixed;
@@ -8,11 +8,6 @@
 		position: absolute;
 		will-change: transform;
 		transition: all 300ms linear;
-		img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-		}
 		&._mars {
 			--size: #{rem(150)};
 			width: var(--size);
@@ -27,5 +22,20 @@
 			top: rem(703);
 			right: rem(247);
 		}
+	}
+	&__astronaut {
+		width: rem(500);
+		height: rem(594);
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	&__svg {
+		width: rem(625);
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		opacity: 0;
 	}
 }

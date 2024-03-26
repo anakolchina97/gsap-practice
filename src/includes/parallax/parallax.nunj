@@ -1,18 +1,39 @@
 {% from "../../components/picture/picture.nunj" import picture %}
 
 <section class="parallax">
+	<svg
+		class="parallax__svg"
+		viewBox="0 0 625 2031"
+		fill="none"
+		xmlns="http://www.w3.org/2000/svg"
+	>
+		<path
+			id="parallax-path"
+			opacity="0.4"
+			d="M592.5 1.5C425.167 55.5 92.1 212.1 98.5 406.5C104.9 600.9 416.833 938.833 572 1083.5C635.667 1208.33 690.3 1511.3 399.5 1724.5C108.7 1937.7 13.3333 2559.33 2 2843.5"
+			stroke="white"
+			stroke-width="3"
+		/>
+	</svg>
 	{{picture({
 		name: 'parallax/mars',
 		format: 'png',
-		className: 'parallax__planet-img',
+		className: 'parallax__planet-img object-fit',
 		classNameWrapper: 'parallax__planet _mars',
 		attr: 'data-depth="10"',
 		mobile: false
 	})}}
 	{{picture({
+		name: 'parallax/astronaut',
+		format: 'png',
+		className: 'parallax__astronaut-img object-fit',
+		classNameWrapper: 'parallax__astronaut',
+		mobile: false
+	})}}
+	{{picture({
 		name: 'parallax/earth',
 		format: 'png',
-		className: 'parallax__planet-img',
+		className: 'parallax__planet-img object-fit',
 		classNameWrapper: 'parallax__planet _earth',
 		attr: 'data-depth="-30"',
 		mobile: false

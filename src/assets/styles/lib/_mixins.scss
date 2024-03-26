@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 @mixin b {
 	display: block;
 	content: ' ';
@@ -302,4 +304,8 @@
 	font-family: inherit;
 	text-decoration: none;
 	cursor: pointer;
+}
+
+@function vw($px, $width: 1440) {
+	@return calc(round(math.div($px, $width) * 100vw * 10000) / 10000);
 }

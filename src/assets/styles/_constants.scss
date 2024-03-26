@@ -5,6 +5,9 @@ $default-transition-function: ease-out;
 $white: #ffffff;
 $black: #000000;
 
+// ======= BREAKPOINTS =======
+$desktop: 1440px;
+
 :root {
 	// ======= COLORS =======
 	--white: #{$white};

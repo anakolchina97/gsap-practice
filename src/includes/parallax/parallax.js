@@ -1,13 +1,25 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger);
+import { MotionPathPlugin } from 'gsap/MotionPathPlugin';
+gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
 class Parallax {
 	constructor() {
-		this.planets = document.querySelectorAll('.parallax__planet');
+		this.container = document.querySelector('.parallax');
+
+		if (!this.container) {
+			return;
+		}
+
+		this.planets = this.container.querySelectorAll('.parallax__planet');
 		this.init();
+		window.addEventListener('resize', () => this.init());
 	}
 	init() {
+		this.movePlanets();
+		this.moveAstronaut();
+	}
+	movePlanets() {
 		this.planets.forEach(planet => {
 			const depth = parseFloat(planet.getAttribute('data-depth'));
 
@@ -30,6 +42,36 @@ class Parallax {
 				},
 			});
 		});
+	}
+	moveAstronaut() {
+		const path = this.container.querySelector('#parallax-path');
+		const astronaut = this.container.querySelector('.parallax__astronaut');
+
+		const mm = gsap.matchMedia();
+		mm.add(
+			{
+				small: '(max-width: 768px)',
+				large: '(min-width: 769px)',
+			},
+			c => {
+				console.log(c.conditions.small);
+				const startPoint = c.conditions.small ? 'top 10%' : 'top 50%';
+
+				gsap.to(astronaut, {
+					scrollTrigger: {
+						trigger: this.container,
+						start: startPoint,
+						end: 'bottom bottom',
+						scrub: 5,
+					},
+					motionPath: {
+						path: path,
+						align: path,
+						alignOrigin: [0.5, 0.5],
+					},
+				});
+			}
+		);
 	}
 }
 

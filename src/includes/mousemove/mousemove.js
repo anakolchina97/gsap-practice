@@ -7,6 +7,11 @@ class MouseMove {
 	init() {
 		const box = document.querySelector('.mousemove__text');
 		const container = document.querySelector('.mousemove');
+
+		if (!container) {
+			return;
+		}
+
 		const maxMove = 60; // Максимальное смещение элемента
 
 		container.addEventListener('mousemove', function (event) {
